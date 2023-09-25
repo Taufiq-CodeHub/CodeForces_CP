@@ -11,8 +11,8 @@ int main()
 
         int n;
         cin >> n;
-        
-        int a[n], b[n];
+
+        long int a[n], b[n];
 
         for (int i = 0; i < n; i++)
         {
@@ -40,7 +40,7 @@ int main()
             }
         }
 
-        int tmp_a , tmp_b;
+        int tmp_a, tmp_b;
         for (int i = 0; i < n; i++)
         {
             for (int i = 0; i < n; i++)
@@ -60,19 +60,51 @@ int main()
             }
         }
 
+        int mn1 = min(a_mn, b_mn);
+
+        // cout<<mn1<<" "<<a_mn<<" "<<b_mn<<endl;
+
+        if (mn1 == a_mn)
+        {
+
+            int sum = 0;
+            for (int i = 0; i < n; i++)
+            {
+                sum = sum + a_mn + b[i];
+            }
+            cout << sum << endl;
+        }
+        else
+        {
+
+            int sum = 0;
+            for (int i = 0; i < n; i++)
+            {
+                sum = sum + b_mn + a[i];
+            }
+            cout << sum << endl;
+        }
+
+        /* output
+            10
+            9
+            13
+            24
+        */
+
         // cout << a[0] << endl;
         // cout << a_mn << " " << a_mn_indx << endl
         //      << b_mn << " " << b_mn_indx << endl;
-        for (int i = 0; i < n; i++)
-        {
-            cout<<a[i]<<" ";
-        }
-        cout<<endl;
-        for (int i = 0; i < n; i++)
-        {
-            cout<<b[i]<<" ";
-        }
-        cout<<endl;
+        // for (int i = 0; i < n; i++)
+        // {
+        //     cout<<a[i]<<" ";
+        // }
+        // cout<<endl;
+        // for (int i = 0; i < n; i++)
+        // {
+        //     cout<<b[i]<<" ";
+        // }
+        // cout<<endl;
     }
 
     return 0;
