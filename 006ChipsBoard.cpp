@@ -34,7 +34,7 @@ int main(){
         }
         
 
-        // cout<<a_mn<<" "<<a_mn_indx<<endl<<b_mn<<" "<<b_mn_indx<<endl;
+        cout<<a_mn<<" "<<a_mn_indx<<endl<<b_mn<<" "<<b_mn_indx<<endl;
         // for (int i = 0; i < n; i++)
         // {
         //     // cout<<a[i]<<" "<<b[i]<<endl;
