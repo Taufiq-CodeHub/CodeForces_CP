@@ -12,7 +12,7 @@ int main()
         int n;
         cin >> n;
 
-        long int a[n], b[n];
+        int a[n], b[n];
 
         for (int i = 0; i < n; i++)
         {
@@ -43,47 +43,50 @@ int main()
         int tmp_a, tmp_b;
         for (int i = 0; i < n; i++)
         {
-            for (int i = 0; i < n; i++)
+            for (int i = 1; i <= n; i++)
             {
-                if (a[i] > a[i + 1])
+                if (a[i-1] > a[i ])
                 {
-                    tmp_a = a[i];
-                    a[i] = a[i + 1];
-                    a[i + 1] = tmp_a;
+                    tmp_a = a[i-1];
+                    a[i-1] = a[i ];
+                    a[i ] = tmp_a;
                 }
-                if (b[i] > b[i + 1])
+                if (b[i-1] > b[i ])
                 {
-                    tmp_b = b[i];
-                    b[i] = b[i + 1];
-                    b[i + 1] = tmp_b;
+                    tmp_b = b[i-1];
+                    b[i-1] = b[i ];
+                    b[i ] = tmp_b;
                 }
             }
         }
 
-        int mn1 = min(a_mn, b_mn);
+        
 
-        // cout<<mn1<<" "<<a_mn<<" "<<b_mn<<endl;
 
-        if (mn1 == a_mn)
-        {
+        // int mn1 = min(a_mn, b_mn);
 
-            int sum = 0;
-            for (int i = 0; i < n; i++)
-            {
-                sum = sum + a_mn + b[i];
-            }
-            cout << sum << endl;
-        }
-        else
-        {
+        // // cout<<mn1<<" "<<a_mn<<" "<<b_mn<<endl;
 
-            int sum = 0;
-            for (int i = 0; i < n; i++)
-            {
-                sum = sum + b_mn + a[i];
-            }
-            cout << sum << endl;
-        }
+        // if (mn1 == a_mn)
+        // {
+
+        //     int sum = 0;
+        //     for (int i = 0; i < n; i++)
+        //     {
+        //         sum = sum + a_mn + b[i];
+        //     }
+        //     cout << sum << endl;
+        // }
+        // else if(mn1 == b_mn)
+        // {
+
+        //     int sum = 0;
+        //     for (int i = 0; i < n; i++)
+        //     {
+        //         sum = sum + b_mn + a[i];
+        //     }
+        //     cout << sum << endl;
+        // }
 
         /* output
             10
